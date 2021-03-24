@@ -9,4 +9,6 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 172.17.5.1/28
+      - 172.17.3.3/28     
+      #avoid-buggy-ips: true
+      #auto-assign: true 
