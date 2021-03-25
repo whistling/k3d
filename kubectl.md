@@ -66,6 +66,12 @@ kubectl delete -f recommended.yaml
 
 kubectl delete pods dashboard-metrics-scraper-79c5968bdc-v7g2c -n kubernetes-dashboard
 
+kubectl port-forward service/nginx-deployment 8080:80
+
+
+kubectl get svc nginx-deployment -o yaml
+
+kubectl get nodes -o yaml | grep ExternalIP -C 1
 
 ### 代理
 

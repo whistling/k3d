@@ -6,8 +6,9 @@ metadata:
     run: nginx
 spec:
   ports:
-  - port: 8081
+  - port: 80
     protocol: TCP
   selector:
     run: nginx
-  type: NodePort
+  type: LoadBalancer
+#  type: NodePort
