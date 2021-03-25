@@ -15,7 +15,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ### 启动服务
 kubectl create deployment nginx --image nginx
 
-kubectl expose deployment/nginx --type="LoadBalancer" --port 8080
+kubectl expose deployment/nginx --type="LoadBalancer" --port 80
 
 ### 拉取镜像
 kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
@@ -35,7 +35,7 @@ kubectl create secret generic -n metallb-system memberlist --from-literal=secret
 kubectl get pods -n metallb-system
 
 使用
-kubectl apply -f configMap.yaml
+kubectl apply -f configmap.yaml
 
 配置的ip段和 node的ip端前两位一致
 kubectl get nodes -o wide

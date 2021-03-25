@@ -9,6 +9,13 @@ kubectl apply -f test-deployment-service.yaml
 
 kubectl apply -f test-ingress.yaml
 
+ip域名绑定
+ k get svc -o wide -A |grep ingress-nginx  找到 EXTERNAL-IP
+
+ 绑定到host 上
+172.23.5.1 test-ingress.com
+
+
 查看结果
 curl http://test-ingress.com/foo
 

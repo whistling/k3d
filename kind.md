@@ -7,6 +7,9 @@ chmod +x ./kind
 
 mv ./kind /usr/bin
 
+kind create cluster
+
+
 
 ### 启动面板
 
@@ -23,9 +26,12 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 
 kubectl apply -f admin-user-role-binding.yaml
 
-kubectl -n kube-system describe secret '(kubectl -n kube-system get secret | grep admin | awk '{print $1}')' |grep admin-user-token
-
 kubectl -n kube-system get secret|grep admin
 
 kubectl -n kube-system describe secret admin-token-6pvrv 
+
+
+
+
+kubectl -n kube-system describe secret '(kubectl -n kube-system get secret | grep admin | awk '{print $1}')' |grep admin-user-token
 
