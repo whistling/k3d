@@ -5,7 +5,7 @@ metadata:
   labels:
     app: my-web
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: my-web
@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
         - name: my-web
-          imagePullPolicy: IfNotPresent
-  #        imagePullPolicy: Never
-          image: crazyants/my-web:v2
+  #        imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
+          image: crazyants/my-web:v5
           ports:
             - containerPort: 8080
 ---
