@@ -13,6 +13,7 @@ test:
 	echo $(V)
 
 run:
+	$(info tag version: $(V))
 	make build
 	make push
 	make restart
