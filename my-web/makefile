@@ -5,7 +5,12 @@
 #   make build
 #   make build
 #   make restart
-.PHONY: build
+.PHONY: run build push restart
+
+V ?= v4
+
+test:
+	echo $(V)
 
 run:
 	make build
@@ -13,10 +18,10 @@ run:
 	make restart
 
 build:
-	docker build -t crazyants/my-web:v4 .
+	docker build -t crazyants/my-web:$(V) .
 
 push:
-	docker push crazyants/my-web:v4
+	docker push crazyants/my-web:$(V)
 
 restart:
 	kubectl apply -f deployment-service.yaml
