@@ -9,7 +9,5 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root
 COPY --from=0 /go/src/my-web/app .
-RUN pwd
-RUN ls -al
 EXPOSE 8080
 ENTRYPOINT ["./app"]

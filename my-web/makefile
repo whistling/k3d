@@ -1,10 +1,22 @@
-.PHONY: cleanall cleanobj cleandiff
 
-cleanall : cleanobj cleandiff
-        rm program
+# Example:
+#   make run
 
-cleanobj :
-        rm *.o
+#   make build
+#   make build
+#   make restart
+.PHONY: build
 
-cleandiff :
-        rm *.diff
+run:
+	make build
+	make push
+	make restart
+
+build:
+	docker build -t crazyants/my-web:v4 .
+
+push:
+	docker push crazyants/my-web:v4
+
+restart:
+	kubectl apply -f deployment-service.yaml
