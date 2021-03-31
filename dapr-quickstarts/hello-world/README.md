@@ -25,7 +25,7 @@ Now that Dapr is set up locally, clone the repo, then navigate to the Hello Worl
 
 ```sh
 git clone [-b <dapr_version_tag>] https://github.com/dapr/quickstarts.git
-cd quickstarts/hello-world
+cd dapr-quickstarts/hello-world
 ```
 
 > **Note**: See https://github.com/dapr/quickstarts#supported-dapr-runtime-version for supported tags. Use `git clone https://github.com/dapr/quickstarts.git` when using the edge version of dapr runtime.
