@@ -31,7 +31,5 @@ kubectl -n kube-system get secret|grep admin
 kubectl -n kube-system describe secret admin-token-6pvrv 
 
 
-
-
 kubectl -n kube-system describe secret '(kubectl -n kube-system get secret | grep admin | awk '{print $1}')' |grep admin-user-token
 
