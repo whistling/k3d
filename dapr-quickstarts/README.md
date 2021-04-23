@@ -23,6 +23,7 @@ Dapr is currently under community development with preview releases. The master 
 
 | Dapr Quickstart Version  | Dapr Runtime Version |
 |:--------------------:|:--------------------:|
+| [v1.1.0](https://github.com/dapr/quickstarts/tree/v1.1.0) | [v1.1.0](https://github.com/dapr/dapr/tree/v1.1.0) |
 | [v1.0.0](https://github.com/dapr/quickstarts/tree/v1.0.0) | [v1.0.0](https://github.com/dapr/dapr/tree/v1.0.0) |
 | [v0.11.0](https://github.com/dapr/quickstarts/tree/v0.11.0) | [v0.11.3](https://github.com/dapr/dapr/tree/v0.11.3) |
 | [v0.10.0](https://github.com/dapr/quickstarts/tree/v0.10.0) | [v0.10.0](https://github.com/dapr/dapr/tree/v0.10.0) |
@@ -55,7 +56,7 @@ Find SDK-specific samples in the links below:
 
 - **[.NET SDK](https://github.com/dapr/dotnet-sdk)**
   - **[Getting Started with ASP.NET Core](https://github.com/dapr/dotnet-sdk/tree/master/examples/AspNetCore)** - Samples for developing ASP.NET applications using the Dapr .NET SDK
-  - **[Getting Started with .NET Actors](https://docs.dapr.io/developing-applications/sdks/dotnet/dotnet-actors/dotnet-actor-howto/)** - Tutorial for developing actor applications using the Dapr .NET SDK including **[actor samples](https://github.com/dapr/dotnet-sdk/tree/master/examples/Actor)**
+  - **[Getting Started with .NET Actors](https://docs.dapr.io/developing-applications/sdks/dotnet/dotnet-actors/dotnet-actors-howto/)** - Tutorial for developing actor applications using the Dapr .NET SDK including **[actor samples](https://github.com/dapr/dotnet-sdk/tree/master/examples/Actor)**
 - **[Java SDK](https://github.com/dapr/java-sdk)**
   - **[Examples](https://github.com/dapr/java-sdk/tree/master/examples/src/main/java/io/dapr/examples)** - Examples for developing Java applications using Dapr
   - **[Example for Java Actors](https://github.com/dapr/java-sdk/tree/master/examples/src/main/java/io/dapr/examples/actors)** - Example for developing an actor application using the Java SDK.

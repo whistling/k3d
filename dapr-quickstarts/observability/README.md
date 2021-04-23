@@ -256,7 +256,6 @@ Now deploy the distributed calculator application to your cluster:
 
 <!-- STEP
 name: Deploy Calculator Kubernetes
-sleep: 60
 expected_stdout_lines:
   - "deployment.apps/subtractapp created"
   - "deployment.apps/addapp created"
@@ -273,6 +272,35 @@ kubectl apply -f ../distributed-calculator/deploy
 
 <!-- END_STEP -->
 
+Kubernetes deployments are asyncronous. This means you'll need to wait for the deployment to complete before moving on to the next steps. You can do so with the following commands:
+
+<!-- STEP
+name: "Deploy Kubernetes"
+expected_stdout_lines:
+  - 'deployment "addapp" successfully rolled out'
+  - 'deployment "subtractapp" successfully rolled out'
+  - 'deployment "divideapp" successfully rolled out'
+  - 'deployment "multiplyapp" successfully rolled out'
+  - 'deployment "calculator-front-end" successfully rolled out'
+-->
+
+```bash
+kubectl rollout status deploy/addapp
+kubectl rollout status deploy/subtractapp
+kubectl rollout status deploy/divideapp
+kubectl rollout status deploy/multiplyapp
+kubectl rollout status deploy/calculator-front-end
+```
+
+
+You can view the status of the running pods with:
+
+```bash
+kubectl get pods
+```
+
+<!-- END_STEP -->
+
 Then, open the distributed calculator UI.
 
 If this is the first time trying the distributed calculator, find more detailed instructions in the [distributed-calculator](https://github.com/dapr/quickstarts/blob/master/distributed-calculator/README.md) quickstart.
@@ -285,7 +313,7 @@ If this is the first time trying the distributed calculator, find more detailed 
 name: Port forward
 background: true
 sleep: 2
-timeout_seconds: 1
+timeout_seconds: 100
 expected_return_code:
 -->
 
@@ -311,6 +339,21 @@ expected_stdout_lines:
 ```bash
 kubectl apply -f ./deploy/python-multiplier.yaml
 ```
+
+<!-- END_STEP -->
+
+As above, you can wait for the asyncronous Kubernetes deployment with the following:
+
+<!-- STEP
+name: "Deploy Kubernetes"
+expected_stdout_lines:
+  - 'deployment "multiplyapp" successfully rolled out'
+-->
+
+```bash
+kubectl rollout status deploy/multiplyapp
+```
+
 
 <!-- END_STEP -->
 
