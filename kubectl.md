@@ -75,6 +75,9 @@ kubectl get svc nginx-deployment -o yaml
 
 kubectl get nodes -o yaml | grep ExternalIP -C 1
 
+## 帮助pod
+kubectl run curl --image=radial/busyboxplus:curl -i --tty
+
 ### 代理
 
 export HTTP_PROXY=http://127.0.0.1:58591; export HTTPS_PROXY=http://127.0.0.1:58591; export ALL_PROXY=socks5://127.0.0.1:51837

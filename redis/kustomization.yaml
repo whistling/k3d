@@ -1,6 +1,0 @@
-configMapGenerator:
-  - name: example-redis-config.yaml
-    files:
-      - redis-config.yaml
-resources:
-  - redis-service.yaml
