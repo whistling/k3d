@@ -3,6 +3,10 @@
 
 kubectl apply -f deploy.yaml
 
+
+#### 删除权限验证
+kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+
 测试
 
 kubectl apply -f test-deployment-service.yaml
@@ -32,9 +36,11 @@ helm install ingress-nginx ingress-nginx/ingress-nginx
 
 helm uninstall ingress-nginx
 
-docker pull pollyduan/ingress-nginx-controller:v0.44.0
+docker pull pollyduan/ingress-nginx-controller:v0.47.0
 
-k8s.gcr.io/ingress-nginx/controller:v0.44.0
+docker tag pollyduan/ingress-nginx-controller:v0.47.0 k8s.gcr.io/ingress-nginx/controller:v0.47.0
+
+k8s.gcr.io/ingress-nginx/controller:v0.47.0
 
 imagePullPolicy: IfNotPresent
 
